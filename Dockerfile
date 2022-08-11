@@ -1,4 +1,4 @@
-FROM ubi9/ubi
+FROM registry.redhat.io/ubi9/ubi
 MAINTAINER Ricardo Alonso <ralonso@redhat.com>
 RUN yum install -y httpd && yum clean all
 RUN sed -i 's/Listen.*/Listen 8080/' /etc/httpd/conf/httpd.conf && \
