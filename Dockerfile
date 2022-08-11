@@ -7,4 +7,4 @@ RUN sed -i 's/Listen.*/Listen 8080/' /etc/httpd/conf/httpd.conf && \
 EXPOSE 8080
 USER 1001
 RUN echo "This is my first apache container for Openshift" > /var/www/html/index.html
-RUN ["httpd","-d","FOREGROUND"]
+CMD ["httpd","-D","FOREGROUND"]
